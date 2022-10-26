@@ -47,7 +47,7 @@ def query_website(num_pages):
 
 
 if __name__ == '__main__':
-    res = query_website(4)
+    res = query_website(int(input('How many pages do you want to view? ')))
     ref_doc = BeautifulSoup(res, 'html.parser')
 
     links = ref_doc.select('.titleline')
